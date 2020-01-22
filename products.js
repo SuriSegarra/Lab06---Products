@@ -1,9 +1,10 @@
 import vacations from './data/vacations.js';
-import renderVacay from './render-vacation.js';
+import renderVacay from './products/render-vacation.js';
 
 const list = document.getElementById('products');
 
-const vacation = vacations[0];
-console.log(vacation)
-const dom = renderVacay(vacation);
-list.appendChild(dom);
+for (let i = 0; i < vacations.length; i++){
+    const vacation = vacations[i];
+    const dom = renderVacay(vacation);
+    list.appendChild(dom);
+}

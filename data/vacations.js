@@ -1,7 +1,7 @@
 const kayakTour = {
     id: 'kayak',
     name: 'Kayak Tour',
-    img: 'kayak.png',
+    image:'assests/bio-kayak.jpg',
     description: ' A nighttime adventure into the waters of Laguna Grande as you visit the area’s amazing bioluminescent bay.',
     category: 'trip',
     price: 50.00
@@ -10,7 +10,7 @@ const kayakTour = {
 const rumTasting = {
     id: 'rum',
     name: 'Rum Tasting',
-    image: 'rum.png',
+    image: 'assests/rum.jpg',
     description: 'Explore the origins of rum and the famous Bacardi family at one of the world’s best-known distilleries.',
     category: 'trip',
     price: 40.00
@@ -19,7 +19,7 @@ const rumTasting = {
 const FoodTour = {
     id: 'food',
     name: 'Food Tour',
-    image: 'food.png',
+    image: 'assests/food.jpg',
     description: 'Get a taste for the flavor and culture of Puerto Rico',
     category: 'food',
     price: 20.00
@@ -28,7 +28,7 @@ const FoodTour = {
 const barHopping = {
     id:'bar',
     name: 'Bar Hopping',
-    image:'bar.png',
+    image:'assests/bar.jpg',
     description: 'Think of this tour as the sophisticated alternative to a pub-crawl.',
     category: 'trip',
     price: 15.00
@@ -38,7 +38,7 @@ const barHopping = {
 const hiking = {
     id: 'hiking',
     name: 'hiking in El Yunque',
-    image: 'hike.png',
+    image: 'assests/yunque.jpg',
     description: 'Admire gorgeous orchids, exotic birds and wildlife like the Coquí (tree frog) as you hike to secret waterfalls and hidden swimming spots',
     category: 'trip',
     price: 10.00
@@ -47,7 +47,7 @@ const hiking = {
 const zipLine = {
     id:'zip-line',
     name: 'zipline in the forest',
-    image:'zipline.png',
+    image:'assests/zipline.jpg',
     description:'Fly through the forest',
     category: 'trip',
     price: 20.00
@@ -56,7 +56,7 @@ const zipLine = {
 const yoga = {
     id:'beach',
     name:'Yoga At The Beach',
-    image:'beach.png',
+    image:'assests/yoga.jpg',
     description:'Come and experience the restoration of body and mind at the beach!',
     category: 'chill',
     price: 15.00

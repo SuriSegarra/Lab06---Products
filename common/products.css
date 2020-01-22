@@ -1,0 +1,9 @@
+#products {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#vacay li {
+    list-style: georgian  ;
+}

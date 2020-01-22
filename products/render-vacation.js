@@ -9,7 +9,7 @@ function renderVacay(vacay) {
 
 
     const img = document.createElement('img');
-    img.src = '../assets/' + vacay.image;
+    img.src = vacay.image;
     img.alt = vacay.name + ' image';
     li.appendChild(img);
 
