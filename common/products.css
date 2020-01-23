@@ -21,7 +21,7 @@ body{
     height: 100%;
     display: block;
     margin: 0 auto;
-    background-color: rgb(83, 83, 158);
+    background-color: #022c4b;
 }
 .logo_container
 {
@@ -38,16 +38,33 @@ body{
     font-size: 32px;
     font-weight: 200;
 }
-.logo_container h1 span{
-    font-weight: 800;
+ul{
+    text-align: center;
+    list-style: inside;
 }
-h2{
-    margin-bottom: 20%;
+li{
+    display: inline-block;
+    width:300px;
+    border: 15px;
+    padding:50px;
+    margin: 20px;
 }
 
-li{
-    margin-left: 50px;
+img{
+    opacity: 1;
+    display:block;
+    width: 295px;
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 0 1px 2px rgba(0, 0,0, 0, .2);
 }
-h3{
-    margin-top: 40px;
+ p{
+     font-size: 20px;
+     margin-right: 50%;
+     
+ }
+button{
+    width: 70px;
+    height: 30px;
+    font-size: 20px;
 }
