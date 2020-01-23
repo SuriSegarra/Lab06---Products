@@ -1,37 +1,35 @@
 function renderVacay(vacay) {
     const li = document.createElement('li');
     li.className = vacay.category;
-    
-
-    const h3 = document.createElement('h3');
-    h3.textContent = vacay.name;
-    li.appendChild(h3);
-
-    
+    li.title = vacay.description;
     
     const img = document.createElement('img');
     img.src = vacay.image;
+    img.className = "image-style";
     img.alt = vacay.name + ' image';
-    li.appendChild(img);
-    
-    const descriptions = document.createElement('description');
-    descriptions.textContent = vacay.description;
-    li.appendChild(descriptions);
-    
+    li.appendChild(img);    
 
+    const cardBody = document.createElement('div');
+    cardBody.className = "card-body";
+    li.appendChild(cardBody);
+
+    const h2 = document.createElement('h2');
+    h2.textContent = vacay.name;
+    cardBody.appendChild(h2);
+    
     const p = document.createElement('p');
     p.className = 'price';
     const usd = '$' + vacay.price.toFixed(2);
     p.textContent = usd;
-
- 
+    cardBody.appendChild(p);
+    
+    
     
     const button = document.createElement('button');
     button.textContent = 'Add';
     button.value = vacay.id;
-    p.appendChild(button);
-
-    li.appendChild(p);
+    cardBody.appendChild(button);
+    
 
     return li;
 }

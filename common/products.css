@@ -44,26 +44,29 @@ ul{
 }
 li{
     display: inline-block;
-    width:300px;
+    width:310px;
     border: solid 1px black;
-    padding:50px;
+    /* padding:50px; */
     margin: 20px;
     font-size: 20px;
+    height: 350px;
+
 }
 
 img{
     opacity: 1;
     display:block;
     width: 295px;
-    border-radius: 5px;
     background: #fff;
     box-shadow: 0 1px 2px rgba(0, 0,0, 0, .2);
 }
  p{
      font-size: 25px;
-     margin-right: 50%;
+     /* margin-right: 50%; */
      position: relative;
-     top: 20px;
+     bottom: -30px;
+     right: 75px;
+     display: inline;
      
     
      
@@ -73,11 +76,22 @@ button{
     height: 30px;
     font-size: 20px;
     position: relative;
-    left: 150px;
+    left: 75px;
+    bottom: -25px ;
+    
+    display: inline;
    
    
 }
 
-h3{
-    margin-bottom: 40px;
+h2{
+    /* margin-bottom: 40px; */
+    /* width:100px; */
+    
+}
+.image-style {
+    width: 100%;
+}
+.card-body{
+    padding: 10px;
 }
