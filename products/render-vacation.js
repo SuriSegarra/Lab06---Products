@@ -7,17 +7,17 @@ function renderVacay(vacay) {
     h3.textContent = vacay.name;
     li.appendChild(h3);
 
-    const descriptions = document.createElement('description');
-    descriptions.textContent = vacay.description;
-    li.appendChild(descriptions);
     
-
+    
     const img = document.createElement('img');
     img.src = vacay.image;
     img.alt = vacay.name + ' image';
     li.appendChild(img);
-
-
+    
+    const descriptions = document.createElement('description');
+    descriptions.textContent = vacay.description;
+    li.appendChild(descriptions);
+    
 
     const p = document.createElement('p');
     p.className = 'price';
