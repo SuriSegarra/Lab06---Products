@@ -13,7 +13,7 @@ const rumTasting = {
     image: 'assests/rum.jpg',
     description: 'Explore the origins of rum and the famous Bacardi family at one of the world’s best-known distilleries.',
     category: 'trip',
-    price: 40.00
+    price: 80.00
 };
 
 const FoodTour = {
@@ -22,7 +22,7 @@ const FoodTour = {
     image: 'assests/food.jpg',
     description: 'Get a taste for the flavor and culture of Puerto Rico',
     category: 'food',
-    price: 20.00
+    price: 120.00
 };
 
 const barHopping = {
@@ -31,7 +31,7 @@ const barHopping = {
     image:'assests/bar.jpg',
     description: 'Think of this tour as the sophisticated alternative to a pub-crawl.',
     category: 'trip',
-    price: 15.00
+    price: 50.00
 
 };
 
@@ -50,7 +50,7 @@ const zipLine = {
     image:'assests/zipline.jpg',
     description:'Fly through the forest',
     category: 'trip',
-    price: 20.00
+    price: 90.00
 };
 
 const yoga = {

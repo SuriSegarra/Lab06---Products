@@ -41,6 +41,7 @@ body{
 ul{
     text-align: center;
     list-style: inside;
+    align-items: center;
 }
 li{
     display: inline-block;
@@ -50,6 +51,7 @@ li{
     margin: 20px;
     font-size: 20px;
     height: 350px;
+    
 
 }
 
@@ -78,7 +80,6 @@ button{
     position: relative;
     left: 75px;
     bottom: -25px ;
-    
     display: inline;
    
    
