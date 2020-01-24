@@ -5,12 +5,16 @@ function renderVacay(vacay) {
     
     const img = document.createElement('img');
     img.src = vacay.image;
-    img.className = "image-style";
+    img.className = 'image-style';
     img.alt = vacay.name + ' image';
-    li.appendChild(img);    
+    
+    const imgDiv = document.createElement('div');
+    imgDiv.className = 'image-div';
+    li.appendChild(imgDiv);
+    imgDiv.appendChild(img);    
 
     const cardBody = document.createElement('div');
-    cardBody.className = "card-body";
+    cardBody.className = 'card-body';
     li.appendChild(cardBody);
 
     const h2 = document.createElement('h2');
@@ -23,13 +27,12 @@ function renderVacay(vacay) {
     p.textContent = usd;
     cardBody.appendChild(p);
     
-    
-    
     const button = document.createElement('button');
     button.textContent = 'Add';
     button.value = vacay.id;
     cardBody.appendChild(button);
     
+
 
     return li;
 }

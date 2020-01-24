@@ -38,7 +38,7 @@ const barHopping = {
 const hiking = {
     id: 'hiking',
     name: 'hiking in El Yunque',
-    image: 'assests/yunque.jpg',
+    image: 'assests/el-yunque.jpg',
     description: 'Admire gorgeous orchids, exotic birds and wildlife like the Coquí (tree frog) as you hike to secret waterfalls and hidden swimming spots',
     category: 'trip',
     price: 10.00
