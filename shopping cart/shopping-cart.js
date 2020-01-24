@@ -1,18 +1,40 @@
 import cart from '../data/cart.js';
 import vacations from '../data/vacations.js';
-import { findById, calcOrderTotal, toUSD } from '../common/utils.js';
+import { findById, calcLOrderTotal } from '../common/utils.js';
 import renderLineItem from './render-line-items.js';
 
-const tbody = document. querySelector('tbody');
+const tableBody = document. querySelector('tbody');
 const orderTotalCell = document.getElementById ('order-total-cell');
+const placeOrderBUtton = document.getElementById('place-order-button');
 
-for (let i = 0; i < cart.length; i++) {
-    const lineItem = cart[i];
-    const vacation = findById(vacations, lineItem.id);
-    const dom = renderLineItem(lineItem, vacation);
-
-    tbody.appendChild(dom);
+const json = localStorage.getItem('theCart');
+let Thecart;
+if(json) {
+    cart = JSON.parse(json);
+}
+else {
+    cart = [];
 }
 
-const orderTotal = calcOrderTotal(cart, vacation);
-orderTotalCell.textContent = toUSD(orderTotalCell);
+cart.forEach(lineItem => {
+    const foundVacation = findById(vacations, lineItem.id);
+    //updateing the dom//
+    const dom = renderLineItem(lineItem, foundVacation);
+    
+    tablebody.appendChild(dom);
+    
+});
+
+const orderTotal = calcLOrderTotal (cart, vacations);
+orderTotalCell.textContent = (orderTotal);
+
+if (cart.length === 0){
+    placeOrderBUtton.disable = true;
+}
+else{
+    placeOrderBUtton.addEventListener('click' () => {
+        localStorage.removeItem('theCart');
+        alert('Order Places:\n' + JSON.stringify(cart, true, 2));
+        window.location  '../';
+    });
+}

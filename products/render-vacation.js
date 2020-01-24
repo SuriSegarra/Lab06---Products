@@ -1,4 +1,7 @@
+import { findById } from '../common/utils.js';
+
 function renderVacay(vacay) {
+
     const li = document.createElement('li');
     li.className = vacay.category;
     li.title = vacay.description;
@@ -31,9 +34,39 @@ function renderVacay(vacay) {
     button.textContent = 'Add';
     button.value = vacay.id;
     cardBody.appendChild(button);
+   
+    button.addEventListener('click', () => {
+
+        let json = localStorage.getItem('theCart');
+        let cart;
+        if (json) {
+            cart = JSON.parse(json);
+        }  
+        else{
+            cart = [];
+        }
+        let lineItem = findById(cart, vacay.id);
+
+        if (!lineItem) {
+            lineItem = {
+                id: vacay.id,
+                quantity: 1
+            };
+            cart.push(lineItem);
+        }
+        else {
+            lineItem.quantity++;
+        }
+        json = JSON.stringify(cart);
+        localStorage.setItem('theCart', json);
+        
+        alert('1 ' + vacay.name + 'added to cart');
+
+    });
+
+    p.appendChild(button);
+    li.appendChild(p);
     
-
-
     return li;
 }
 

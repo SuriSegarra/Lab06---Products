@@ -1,5 +1,5 @@
 
-import roundResult from '../common/utils.js';
+import { roundResult } from '../common/utils.js';
 
 function renderLineItem(lineItem, vacations) {
     const tr = document.createElement ('tr');
@@ -23,8 +23,10 @@ function renderLineItem(lineItem, vacations) {
     const totalCell = document.createElement('td');
     totalCell.className = 'line-item-total';
     const total = lineItem.quantity * vacations.price;
-    totalCell.textContent = total;
+    totalCell.textContent = `$${roundResult(total)}`;
     tr.appendChild(totalCell);
+
+  
     
     return tr;
 }

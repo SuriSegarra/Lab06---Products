@@ -1,5 +1,4 @@
-
-export default function findById(items, id) {
+export function findById(items, id) {
     for (let i = 0; i < items.length; i++) {
         const item = items[i];
 
@@ -22,11 +21,13 @@ export const roundResult = (amount) => {
 
 export function calcLOrderTotal(cart, vacations) {
     let ordertotal = 0;
-
+console.log(cart);
     for (let i = 0; i < cart.length; i++) {
         const lineItem = cart[i]; 
-        const vacation = findById (vacations, lineItem.id);
-        const theTotal = calcLOrderTotal(lineItem.quantity, vacation.price);
+        const vacation = findById(vacations, lineItem.id);
+        console.log(lineItem.id);
+
+        const theTotal = calcLineItem(lineItem.quantity, vacation.price);
         ordertotal += theTotal;
     }
     return roundResult(ordertotal);
